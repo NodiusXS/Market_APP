@@ -1,0 +1,76 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:ios="clr-namespace:Microsoft.Maui.Controls.PlatformConfiguration.iOSSpecific;assembly=Microsoft.Maui.Controls"
+             xmlns:models="clr-namespace:Market_APP.Models"
+             Title="Maui"
+             x:Class="Market_APP.Views.MainPage">
+    <Grid IgnoreSafeArea="{OnPlatform Android=False, iOS=True}">
+        
+        <ScrollView BackgroundColor="#101">
+
+            <VerticalStackLayout>
+                <StackLayout BackgroundColor="AliceBlue">
+                    <Image Source="image16_1.png" MaximumHeightRequest="400"/>
+                    <FlexLayout  BackgroundColor="#102" HeightRequest="90" Padding="0,10,0,10" Margin="0,0,0,-60"></FlexLayout>
+                    <HorizontalStackLayout  HeightRequest="50">
+                        <Image Source="smc_5.png"  HeightRequest="80" Margin="20,-50,0,0"/>
+
+                        <VerticalStackLayout Spacing="5" VerticalOptions="End" WidthRequest="190" HeightRequest="100" Margin="10,0,0,-40">
+                            <Label Text="DoTA 2" VerticalOptions="Center" WidthRequest="180"  HeightRequest="20" FontSize="Body"/>
+                            <HorizontalStackLayout>
+                                <Image Source="star_5.png"  WidthRequest="25" HeightRequest="20" />
+                                <Image Source="star_5.png"  WidthRequest="25" HeightRequest="20" />
+                                <Image Source="star_5.png"  WidthRequest="25" HeightRequest="20" />
+                                <Image Source="star_5.png"  WidthRequest="25" HeightRequest="20" />
+                                <Image Source="star_5.png"  WidthRequest="25" HeightRequest="20" />
+                                <Label Text="70,8м" VerticalOptions="Center" WidthRequest="100" Margin="10,5,0,0" HeightRequest="20" />
+                            </HorizontalStackLayout>
+                        </VerticalStackLayout>
+                    </HorizontalStackLayout>
+                </StackLayout>
+
+                <SearchBar BackgroundColor="DarkGoldenrod" Text="Search"></SearchBar>
+                <Label Text="Dota 2 is a multiplayer online battle arena (MOBA) game which has two teams of five players compete to collectively destroy a large structure defended by the opposing team known as the &quot;Ancient&quot;, whilst defending their own." Margin="10,10,10,0" />
+                <CarouselView ItemsSource="{Binding ImagesList}"
+                     Margin="10">
+                </CarouselView>
+                <IndicatorView x:Name="IndicatorView"
+                       IndicatorColor="LightGray"
+                       SelectedIndicatorColor="Black"
+                       HorizontalOptions="Center">
+
+                </IndicatorView>
+                <Label Text="Dota 2 is a multiplayer online battle arena (MOBA) game which has two teams of five players compete to collectively destroy a large structure defended by the opposing team known as the &quot;Ancient&quot;, whilst defending their own." Margin="10,10,10,0" />
+
+                <ScrollView>
+                    <HorizontalStackLayout Spacing="20" >
+                        <Image Source="smc_2.png" WidthRequest="300" HeightRequest="150"/>
+                        <Image Source="smc_3.png" WidthRequest="300" HeightRequest="150"/>
+                        <Image Source="smc_3.png" WidthRequest="300" HeightRequest="150"/>
+                    </HorizontalStackLayout>
+                </ScrollView>
+
+                <Label Text="Dota 2 is a multiplayer online battle arena (MOBA) game which has two teams of five players compete to collectively destroy a large structure defended by the opposing team known as the &quot;Ancient&quot;, whilst defending their own." Margin="10,10,10,0" />
+                <Label Text="Dota 2 is a multiplayer online battle arena (MOBA) game which has two teams of five players compete to collectively destroy a large structure defended by the opposing team known as the &quot;Ancient&quot;, whilst defending their own." Margin="10,10,10,0" />
+
+                <Label
+                     HorizontalOptions="Center"
+                     HorizontalTextAlignment="Center"
+                     LineBreakMode="WordWrap"
+                     Style="{StaticResource IntroPageTextStyle}"
+                     Text="Want to know and explain all things about the planets in the Milky Way galaxy?"/>
+
+                <Button
+                    Style="{StaticResource ButtonStyle}"
+                    Text="Explore Now"
+                    HorizontalOptions="Center"
+                    Margin="0,12,0,6"
+                    Clicked="ExploreNow_Clicked"/>
+
+            </VerticalStackLayout>
+        </ScrollView>
+    </Grid>
+
+</ContentPage>
+    
